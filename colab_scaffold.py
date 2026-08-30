@@ -16,7 +16,7 @@
 # server, the nvidia-smi sampler) runs in the background and is watched by a
 # short cell that returns.
 #
-# Pin source: versions come from ../../../PINS.md (course root). The vLLM-on-T4 pin
+# Pin source: versions come from ../../PINS.md (course root). The vLLM-on-T4 pin
 # is verified on a real free-tier T4 before the cohort starts; the confirmed
 # version and date land in PINS.md under "Verification status". Do not invent a
 # vLLM version here; read the pin.
@@ -26,12 +26,12 @@
 #   uvx jupytext --to ipynb colab_scaffold.py
 
 # %%
-# PINS block. These mirror ../../../PINS.md (course root, the single source of
+# PINS block. These mirror ../../PINS.md (course root, the single source of
 # truth). If a pin changes, it changes in PINS.md first, then here. The vLLM pin
 # is the load-bearing one: it must be the version confirmed on a real free-tier
 # T4 during the pre-cohort verification pass. Read PINS.md before you run this.
 #
-# PINS (from ../../../PINS.md):
+# PINS (from ../../PINS.md):
 #   VLLM_PIN=0.6.*          # OpenAI server; runs the xformers backend on sm75
 #   BITSANDBYTES_PIN=0.49.2 # int8/int4 load path (day 1 profiling); 0.44.* is
 #                           # broken on Colab's cu128 torch, see PINS.md
@@ -48,7 +48,7 @@
 # NOT install vLLM; days 2 to 5 serve, and must.
 import subprocess, sys
 
-# Pins mirrored from ../../../PINS.md. Keep these two in sync (PINS.md wins).
+# Pins mirrored from ../../PINS.md. Keep these two in sync (PINS.md wins).
 VLLM_PIN = "0.6.*"
 BITSANDBYTES_PIN = "0.49.2"
 AUTOAWQ_PIN = "0.2.*"
@@ -303,7 +303,7 @@ RECOVERY_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
 RECOVERY_PORT = 8000
 RECOVERY_LOG = "/content/server.log"
 
-# Pins mirrored from ../../../PINS.md (keep in sync; PINS.md wins).
+# Pins mirrored from ../../PINS.md (keep in sync; PINS.md wins).
 _R_TRANSFORMERS = "4.46.*"   # PINS.md: mandatory beside vLLM, every fresh runtime
 _R_ACCELERATE = "1.1.*"
 _R_NEED_AWQ = False          # set True on day 4+ if your locked model is AWQ
