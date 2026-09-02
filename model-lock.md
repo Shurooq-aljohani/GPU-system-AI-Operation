@@ -20,4 +20,5 @@
 # Quality spot check note
 * The quantized build held up exceptionally well across all prompts with no noticeable degradation compared to fp16.
 
+
 <img width="874" height="250" alt="Pass-Pic - Lab W3D4" src="https://github.com/user-attachments/assets/2257a83f-e924-4262-9ed9-b11f37216fad" />
